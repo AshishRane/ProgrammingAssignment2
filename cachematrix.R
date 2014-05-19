@@ -1,7 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The overall objective of this program is to write a pair of functions 
+## that cache the inverse of a matrix. As matrix inversion is a costly computation
+## caching will reduce computing it repeatedly.
 
-## Write a short comment describing this function
+
+## This function (makeCacheMatrix) creates a special "matrix" object that can cache its inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
@@ -19,7 +21,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function(cacheSolve) computes the inverse of the special "matrix" returned by makeCacheMatrix above. 
 
 cacheSolve <- function(x, ...) {
         m <- x$getinv()
@@ -31,5 +33,5 @@ cacheSolve <- function(x, ...) {
         data <- x$get()
         m <- solve(data)
         m
-        ## Return a matrix that is the inverse of 'x'
+       
 }
